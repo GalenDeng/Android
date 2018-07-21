@@ -1,0 +1,35 @@
+   CREATE BY  Galen  2018.07.22
+
+<!--  操作说明  -->
+1. table的excel表格要放到手机/或模拟机的 /sdcard/Download 目录下
+2. 每次修改了table表格后，APP要重新导入table
+3. 如果不修改table,打开 demo(APP)即可进行查询操作
+4. table表格填写规范映射关系:
+        // 判别值种类
+        // 1 ：相同种化学品
+        // 2 ：可以配存
+        // 3 ：可以配存，堆放时至少隔离2米
+        // 4 : 不可以配存
+		
+5. 此APP用于 化学品配存查询
+
+
+6. 注意 : table放在asset的目录下的话,修改了表格还要在android studio中进行 run 的操作, sqlite3数据库的
+   db文件才更新
+   
+7. 用到的框架
+1) LitePal  :  https://github.com/LitePalFramework/LitePal
+2) SQLiteToExce:  https://github.com/li-yu/SQLiteToExcel
+
+8. app ->  build.gradle
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-compat:27.0.0-alpha1'
+    implementation 'com.liyu.tools:sqlitetoexcel:1.0.7'
+    implementation 'org.litepal.android:core:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
